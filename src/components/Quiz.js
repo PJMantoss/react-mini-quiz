@@ -8,6 +8,8 @@ const Quiz = () => {
     // To keep track of the current question
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
+    const header = new Headers({ "Access-Control-Allow-Origin": "*" });
+
     useEffect(() => {
         const apiCall = async () => {
             // fetch data from API on initial render
@@ -26,7 +28,9 @@ const Quiz = () => {
     const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div>Quiz</div>
+    <>
+        <h1>{currentQuestion.question}</h1>
+    </>
   )
 }
 
