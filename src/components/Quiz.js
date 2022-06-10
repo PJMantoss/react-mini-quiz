@@ -20,6 +20,9 @@ const Quiz = () => {
         apiCall();
     }, []);
 
+    // If we don't have any questions
+    if(questions === null) return null;
+
     const currentQuestion = questions[currentQuestionIndex];
 
   return (
