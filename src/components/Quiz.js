@@ -8,7 +8,11 @@ const Quiz = () => {
     // const [qusetions, setQuestions] = useState(null);
 
     useEffect(() => {
-        const apiCall = async () => {};
+        const apiCall = async () => {
+            const result = await fetch(QUIZ_API_BASE_URL);
+            const jsonResponse = await result.json();
+            setQuestions(jsonResponse);
+        };
 
         apiCall();
     }, []);
