@@ -6,9 +6,15 @@ const Quiz = () => {
     const [qusetions, setQuestions] = useState(null);
     // const [qusetions, setQuestions] = useState(null);
 
+    useEffect(() => {
+        const apiCall = async () => {};
+
+        apiCall();
+    }, []);
+
   return (
     <div>Quiz</div>
   )
 }
 
-export default Quiz
+export default Quiz;
