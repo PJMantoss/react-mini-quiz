@@ -4,8 +4,9 @@ import './Quiz.css'
 const QUIZ_API_BASE_URL = 'https://api.frontendexpert.io/api/fe/quiz';
 
 const Quiz = () => {
-    const [qusetions, setQuestions] = useState(null);
-    // const [qusetions, setQuestions] = useState(null);
+    const [questions, setQuestions] = useState(null);
+    // To keep track of the current question
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
     useEffect(() => {
         const apiCall = async () => {
@@ -18,6 +19,8 @@ const Quiz = () => {
 
         apiCall();
     }, []);
+
+    const currentQuestion = questions[currentQuestionIndex];
 
   return (
     <div>Quiz</div>
