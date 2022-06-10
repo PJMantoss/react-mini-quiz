@@ -11,6 +11,7 @@ const Quiz = () => {
         const apiCall = async () => {
             const result = await fetch(QUIZ_API_BASE_URL);
             const jsonResponse = await result.json();
+            // fetch data and update state on initial render
             setQuestions(jsonResponse);
         };
 
